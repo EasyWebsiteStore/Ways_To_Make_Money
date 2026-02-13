@@ -1,0 +1,100 @@
+{
+  "name": "Opportunity",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Name of the opportunity"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "signups_rewards",
+        "online_surveys",
+        "learn_and_earn",
+        "crypto_nft_gaming",
+        "cashback_coupons",
+        "referral_programs",
+        "passive_income"
+      ],
+      "description": "Category of the opportunity"
+    },
+    "description": {
+      "type": "string",
+      "description": "Detailed description of the opportunity"
+    },
+    "earning_potential": {
+      "type": "string",
+      "description": "Realistic earning expectation (e.g. $5-$20/month)"
+    },
+    "time_investment": {
+      "type": "string",
+      "description": "Time required (e.g. 10 min/day)"
+    },
+    "difficulty": {
+      "type": "string",
+      "enum": [
+        "easy",
+        "medium",
+        "hard"
+      ],
+      "description": "How difficult it is to get started"
+    },
+    "recommendation": {
+      "type": "string",
+      "enum": [
+        "highly_recommended",
+        "recommended",
+        "decent",
+        "not_recommended"
+      ],
+      "description": "Personal recommendation level"
+    },
+    "rating": {
+      "type": "number",
+      "description": "Rating out of 5"
+    },
+    "tips": {
+      "type": "string",
+      "description": "Tips and tricks for maximizing earnings"
+    },
+    "referral_link": {
+      "type": "string",
+      "description": "Referral link URL"
+    },
+    "coupon_code": {
+      "type": "string",
+      "description": "Discount or coupon code if applicable"
+    },
+    "evidence_images": {
+      "type": "array",
+      "description": "URLs of earning proof screenshots",
+      "items": {
+        "type": "string"
+      }
+    },
+    "platform_url": {
+      "type": "string",
+      "description": "Direct URL to the platform"
+    },
+    "is_featured": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether this opportunity is featured on the homepage"
+    },
+    "is_active": {
+      "type": "boolean",
+      "default": true,
+      "description": "Whether this opportunity is currently available"
+    },
+    "image_url": {
+      "type": "string",
+      "description": "Cover image URL for the opportunity"
+    }
+  },
+  "required": [
+    "title",
+    "category",
+    "description"
+  ]
+}
